@@ -11,26 +11,16 @@
 <body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 <script>
-    $(document).ready(function() {
-        $.ajax({
-            url: '/getusers',
-            dataType:'json',
-            async:false,
-            error: function(xhr, statusText, err) {
-                console.log("error"+xhr.status);
-            },
-
-            success: function(data) {
-                for (let i = 0; i < data.length; i++) {
-                    var rowcontent = "<tr><th>" + data[i].name + "</th>";
-                    rowcontent = rowcontent + "<td>" + data[i].age + "</td>"
-                    rowcontent = rowcontent + "<td>" + data[i].email + "</td></tr>"
-                    $("#tbl_body").append(rowcontent);
-                }
-            },
-            type: 'GET'
+    fetch('/getstudents')
+        .then(response => response.json())
+        .then(data =>{
+            for (let i = 0; i < data.length; i++) {
+                var rowcontent = "<tr><th>" + data[i].name + "</th>";
+                rowcontent = rowcontent + "<td>" + data[i].age + "</td></tr>"
+                $("#tbl_body").append(rowcontent);
+            }
         });
-    });
+
 </script>
 <nav class="navbar navbar-dark bg-dark">
     <div class="container-fluid">
@@ -62,7 +52,6 @@
    <tr>
        <th>Name</th>
        <th>Age</th>
-       <th>Email</th>
    </tr>
    </thead>
     <tbody id="tbl_body"></tbody>

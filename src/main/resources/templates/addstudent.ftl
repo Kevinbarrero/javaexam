@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
     <meta charset="UTF-8">
@@ -24,7 +24,7 @@
                     <a class="nav-link" href="/addStudent">addStudent</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/liststudents">Students</a>
+                    <a class="nav-link" href="/students">Students</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/logout">Log Out</a>
@@ -37,38 +37,57 @@
     </div>
 </nav>
 
-<div class="container d-flex justify-content-center align-items-center">
 
-    <div class="card">
+<section class="vh-100" style="background-color: #2779e2;">
+    <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-xl-9">
 
-        <div class="upper">
+                <h1 class="text-white mb-4">Apply for a job</h1>
 
-            <img src="https://i.imgur.com/Qtrsrk5.jpg" class="img-fluid">
+                <div class="card" style="border-radius: 15px;">
+                    <div class="card-body">
+                        <form action="/addStudent" method="post">
+                        <div class="row align-items-center pt-4 pb-3">
+                            <div class="col-md-3 ps-5">
 
-        </div>
+                                <h6 class="mb-0">name</h6>
 
-        <div class="user text-center">
+                            </div>
+                            <div class="col-md-9 pe-5">
 
-            <div class="profile">
+                                <input type="text" name="name" class="form-control form-control-lg" />
 
-                <img src="https://i.imgur.com/JgYD2nQ.jpg" class="rounded-circle" width="80">
+                            </div>
+                        </div>
+
+                        <hr class="mx-n3">
+
+                        <div class="row align-items-center pt-4 pb-3">
+                            <div class="col-md-3 ps-5">
+
+                                <h6 class="mb-0">age</h6>
+
+                            </div>
+                            <div class="col-md-9 pe-5">
+
+                                <input type="text" name="age" class="form-control form-control-lg" />
+
+                            </div>
+                        </div>
+
+                        <div class="px-5 py-4">
+                            <button type="submit" class="btn btn-primary btn-lg">add student</button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
 
             </div>
-
         </div>
-
-
-        <div class="mt-5 text-center">
-
-            <h4 class="mb-0">${teacher.name}</h4>
-            <span class="text-muted d-block mb-2">Age: ${teacher.email}</span>
-
-
-        </div>
-
     </div>
+</section>
 
-</div>
 
 </body>
 </html>

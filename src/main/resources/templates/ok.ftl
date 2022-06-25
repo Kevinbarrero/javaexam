@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
     <meta charset="UTF-8">
@@ -24,7 +24,7 @@
                     <a class="nav-link" href="/addStudent">addStudent</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/liststudents">Students</a>
+                    <a class="nav-link" href="/students">Students</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/logout">Log Out</a>
@@ -37,38 +37,6 @@
     </div>
 </nav>
 
-<div class="container d-flex justify-content-center align-items-center">
-
-    <div class="card">
-
-        <div class="upper">
-
-            <img src="https://i.imgur.com/Qtrsrk5.jpg" class="img-fluid">
-
-        </div>
-
-        <div class="user text-center">
-
-            <div class="profile">
-
-                <img src="https://i.imgur.com/JgYD2nQ.jpg" class="rounded-circle" width="80">
-
-            </div>
-
-        </div>
-
-
-        <div class="mt-5 text-center">
-
-            <h4 class="mb-0">${teacher.name}</h4>
-            <span class="text-muted d-block mb-2">Age: ${teacher.email}</span>
-
-
-        </div>
-
-    </div>
-
-</div>
-
+<h>studend added</h>
 </body>
 </html>
